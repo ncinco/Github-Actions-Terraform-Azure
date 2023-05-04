@@ -27,7 +27,7 @@ jobs:
       
     - name: Make Temporary Directory
       run: |
-        mkdir terraform
+        mkdir terraform_tmp
 
     - name: 'Terraform Format'
       uses: hashicorp/terraform-github-actions@master
