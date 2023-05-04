@@ -1,8 +1,9 @@
 terraform {
-  required_providers {
-    astra = {
-      source = "datastax/astra"
-      version = ">=1.0.0"
-    }
-  }
+ required_version = ">= 1.0.0"
+ required_providers {
+   astra = {
+     source = "datastax/astra"
+     version = ">=1.0.0"
+   }
+ }
 }
