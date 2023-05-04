@@ -24,6 +24,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      
+    - name: Make Temporary Directory
+      run: |
+        mkdir terraform
 
     - name: 'Terraform Format'
       uses: hashicorp/terraform-github-actions@master
