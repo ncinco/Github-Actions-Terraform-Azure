@@ -1,0 +1,18 @@
+{
+  "name": "relationship_info",
+  "keyspace": "accounts",
+  "fields": [
+    {
+      "name": "tokenised_cif",
+      "typeDefinition": "uuid"
+    },
+    {
+      "name": "cif_number",
+      "typeDefinition": "text"
+    },
+    {
+      "name": "link_type",
+      "typeDefinition": "text"
+    }
+  ]
+}

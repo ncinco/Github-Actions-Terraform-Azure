@@ -1,0 +1,7 @@
+{
+  "name": "relationships_idx",
+  "column": "relationships",
+  "type": "StorageAttachedIndex",
+  "ifNotExists": true,
+  "kind": "KEYS"
+}

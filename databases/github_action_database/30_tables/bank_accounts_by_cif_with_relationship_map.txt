@@ -1,0 +1,93 @@
+{
+  "name": "bank_accounts_by_cif_with_relationship_map",
+  "keyspace": "accounts",
+  "columnDefinitions": [
+    {
+      "name": "account_number",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "account_type",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "account_balance",
+      "typeDefinition": "decimal",
+      "static": false
+    },
+    {
+      "name": "account_branch",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "account_closure_datetime",
+      "typeDefinition": "timestamp",
+      "static": false
+    },
+    {
+      "name": "account_hold_flag",
+      "typeDefinition": "boolean",
+      "static": false
+    },
+    {
+      "name": "account_name",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "account_number_tokenised",
+      "typeDefinition": "uuid",
+      "static": false
+    },
+    {
+      "name": "account_open_datetime",
+      "typeDefinition": "timestamp",
+      "static": false
+    },
+    {
+      "name": "available_balance",
+      "typeDefinition": "decimal",
+      "static": false
+    },
+    {
+      "name": "currency",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "product_name",
+      "typeDefinition": "text",
+      "static": false
+    },
+    {
+      "name": "product_number",
+      "typeDefinition": "uuid",
+      "static": false
+    },
+    {
+      "name": "relationships",
+      "typeDefinition": "map<uuid, frozen<relationship_info>>",
+      "static": false
+    }
+  ],
+  "primaryKey": {
+    "partitionKey": [
+      "account_number"
+    ],
+    "clusteringKey": [
+      "account_type"
+    ]
+  },
+  "tableOptions": {
+    "defaultTimeToLive": 0,
+    "clusteringExpression": [
+      {
+        "order": "ASC",
+        "column": "account_type"
+      }
+    ]
+  }
+}
